@@ -40,6 +40,7 @@ class PapermillOperator(BaseOperator):
     :param parameters: the notebook parameters to set
     :type parameters: dict
     """
+    template_fields =('input_nb', 'output_nb', 'parameters')
     @apply_defaults
     def __init__(self, input_nb, output_nb, parameters,
                  *args, **kwargs):
